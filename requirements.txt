@@ -1,0 +1,10 @@
+boto3==1.43.103
+fastapi==0.141.1
+httpx==0.28.1
+moto[dynamodb]==5.2.3
+psycopg[binary]==3.3.6
+pydantic==2.13.5
+pymysql>=1.1
+pytest==9.1.1
+sqlalchemy==2.1.1
+uvicorn==0.54.0

@@ -1,0 +1,410 @@
+﻿{
+    "result_count":  3,
+    "results":  [
+                    {
+                        "addresses":  [
+                                          {
+                                              "address_1":  "332 E 14TH ST",
+                                              "address_purpose":  "LOCATION",
+                                              "address_type":  "DOM",
+                                              "city":  "NEW YORK",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "fax_number":  "212-253-4242",
+                                              "postal_code":  "100034243",
+                                              "state":  "NY",
+                                              "telephone_number":  "212-481-3333"
+                                          },
+                                          {
+                                              "address_1":  "174 NASSAU ST",
+                                              "address_2":  "SUITE 3900",
+                                              "address_purpose":  "MAILING",
+                                              "address_type":  "DOM",
+                                              "city":  "PRINCETON",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "postal_code":  "085427005",
+                                              "state":  "NJ",
+                                              "telephone_number":  "212-481-3333"
+                                          }
+                                      ],
+                        "basic":  {
+                                      "authorized_official_credential":  "MD",
+                                      "authorized_official_first_name":  "RAJAT",
+                                      "authorized_official_last_name":  "LAMIGTON",
+                                      "authorized_official_middle_name":  "E",
+                                      "authorized_official_name_prefix":  "Dr.",
+                                      "authorized_official_name_suffix":  "--",
+                                      "authorized_official_telephone_number":  "2124813333",
+                                      "authorized_official_title_or_position":  "President CEO",
+                                      "certification_date":  "2021-05-27",
+                                      "enumeration_date":  "2016-05-18",
+                                      "last_updated":  "2021-05-27",
+                                      "organization_name":  "14 STREET MEDICAL, PC",
+                                      "organizational_subpart":  "NO",
+                                      "status":  "A"
+                                  },
+                        "created_epoch":  "1463596574000",
+                        "endpoints":  [
+
+                                      ],
+                        "enumeration_type":  "NPI-2",
+                        "identifiers":  [
+                                            {
+                                                "code":  "05",
+                                                "desc":  "MEDICAID",
+                                                "identifier":  "04602508",
+                                                "issuer":  null,
+                                                "state":  "NY"
+                                            }
+                                        ],
+                        "last_updated_epoch":  "1622123691000",
+                        "number":  "1386091486",
+                        "other_names":  [
+
+                                        ],
+                        "practiceLocations":  [
+                                                  {
+                                                      "address_1":  "110 W 14TH ST",
+                                                      "address_purpose":  "LOCATION",
+                                                      "address_type":  "DOM",
+                                                      "city":  "NEW YORK",
+                                                      "country_code":  "US",
+                                                      "country_name":  "United States",
+                                                      "fax_number":  "212-253-4242",
+                                                      "postal_code":  "100117303",
+                                                      "state":  "NY",
+                                                      "telephone_number":  "212-481-3333"
+                                                  },
+                                                  {
+                                                      "address_1":  "500 E 14TH ST",
+                                                      "address_purpose":  "LOCATION",
+                                                      "address_type":  "DOM",
+                                                      "city":  "NEW YORK",
+                                                      "country_code":  "US",
+                                                      "country_name":  "United States",
+                                                      "fax_number":  "212-253-4242",
+                                                      "postal_code":  "100093336",
+                                                      "state":  "NY",
+                                                      "telephone_number":  "212-481-3333"
+                                                  },
+                                                  {
+                                                      "address_1":  "912 COLUMBUS AVE",
+                                                      "address_purpose":  "LOCATION",
+                                                      "address_type":  "DOM",
+                                                      "city":  "NEW YORK",
+                                                      "country_code":  "US",
+                                                      "country_name":  "United States",
+                                                      "fax_number":  "212-253-4242",
+                                                      "postal_code":  "100254040",
+                                                      "state":  "NY",
+                                                      "telephone_number":  "212-481-3333"
+                                                  }
+                                              ],
+                        "taxonomies":  [
+                                           {
+                                               "code":  "207RI0011X",
+                                               "desc":  "Internal Medicine, Interventional Cardiology",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207RM1200X",
+                                               "desc":  "Internal Medicine, Magnetic Resonance Imaging (MRI)",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207RS0012X",
+                                               "desc":  "Internal Medicine, Sleep Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2084D0003X",
+                                               "desc":  "Psychiatry \u0026 Neurology, Diagnostic Neuroimaging",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2084N0008X",
+                                               "desc":  "Psychiatry \u0026 Neurology, Neuromuscular Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2084N0400X",
+                                               "desc":  "Psychiatry \u0026 Neurology, Neurology",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2084N0600X",
+                                               "desc":  null,
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2084P2900X",
+                                               "desc":  "Psychiatry \u0026 Neurology, Pain Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2084S0010X",
+                                               "desc":  "Psychiatry \u0026 Neurology, Sports Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2084S0012X",
+                                               "desc":  "Psychiatry \u0026 Neurology, Sleep Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2084V0102X",
+                                               "desc":  "Psychiatry \u0026 Neurology, Vascular Neurology",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2085B0100X",
+                                               "desc":  "Radiology, Body Imaging",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2085D0003X",
+                                               "desc":  "Radiology, Diagnostic Neuroimaging",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2251N0400X",
+                                               "desc":  "Physical Therapist, Neurology",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207R00000X",
+                                               "desc":  "Internal Medicine",
+                                               "license":  null,
+                                               "primary":  true,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           }
+                                       ]
+                    },
+                    {
+                        "addresses":  [
+                                          {
+                                              "address_1":  "9001 FORT HAMILTON PKWY",
+                                              "address_purpose":  "LOCATION",
+                                              "address_type":  "DOM",
+                                              "city":  "BROOKLYN",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "postal_code":  "112096408",
+                                              "state":  "NY",
+                                              "telephone_number":  "718-748-4446"
+                                          },
+                                          {
+                                              "address_1":  "9001 FORT HAMILTON PKWY",
+                                              "address_purpose":  "MAILING",
+                                              "address_type":  "DOM",
+                                              "city":  "BROOKLYN",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "postal_code":  "112096408",
+                                              "state":  "NY",
+                                              "telephone_number":  "718-748-4446"
+                                          }
+                                      ],
+                        "basic":  {
+                                      "authorized_official_credential":  "M.D.",
+                                      "authorized_official_first_name":  "ALI",
+                                      "authorized_official_last_name":  "EL ATAT",
+                                      "authorized_official_name_prefix":  "--",
+                                      "authorized_official_name_suffix":  "--",
+                                      "authorized_official_telephone_number":  "9174555205",
+                                      "authorized_official_title_or_position":  "director",
+                                      "certification_date":  "2020-03-19",
+                                      "enumeration_date":  "2013-03-13",
+                                      "last_updated":  "2020-03-19",
+                                      "organization_name":  "A ATAT PROGRESSIVE PULMONARY \u0026 SLEEP MEDICINE PLLC",
+                                      "organizational_subpart":  "NO",
+                                      "status":  "A"
+                                  },
+                        "created_epoch":  "1363196044000",
+                        "endpoints":  [
+
+                                      ],
+                        "enumeration_type":  "NPI-2",
+                        "identifiers":  [
+
+                                        ],
+                        "last_updated_epoch":  "1584635477000",
+                        "number":  "1720329949",
+                        "other_names":  [
+
+                                        ],
+                        "practiceLocations":  [
+
+                                              ],
+                        "taxonomies":  [
+                                           {
+                                               "code":  "207RS0012X",
+                                               "desc":  "Internal Medicine, Sleep Medicine",
+                                               "license":  "002651",
+                                               "primary":  false,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207RP1001X",
+                                               "desc":  "Internal Medicine, Pulmonary Disease",
+                                               "license":  "002651",
+                                               "primary":  true,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           }
+                                       ]
+                    },
+                    {
+                        "addresses":  [
+                                          {
+                                              "address_1":  "280 E 161ST ST",
+                                              "address_purpose":  "LOCATION",
+                                              "address_type":  "DOM",
+                                              "city":  "BRONX",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "fax_number":  "917-259-7777",
+                                              "postal_code":  "104513521",
+                                              "state":  "NY",
+                                              "telephone_number":  "718-393-5566"
+                                          },
+                                          {
+                                              "address_1":  "280 E 161ST ST",
+                                              "address_purpose":  "MAILING",
+                                              "address_type":  "DOM",
+                                              "city":  "BRONX",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "fax_number":  "917-259-7777",
+                                              "postal_code":  "104513521",
+                                              "state":  "NY",
+                                              "telephone_number":  "718-393-5566"
+                                          }
+                                      ],
+                        "basic":  {
+                                      "authorized_official_credential":  "MD",
+                                      "authorized_official_first_name":  "PRABHAT",
+                                      "authorized_official_last_name":  "SONI",
+                                      "authorized_official_name_prefix":  "--",
+                                      "authorized_official_name_suffix":  "--",
+                                      "authorized_official_telephone_number":  "7189754334",
+                                      "authorized_official_title_or_position":  "President",
+                                      "certification_date":  "2024-05-13",
+                                      "enumeration_date":  "2011-06-10",
+                                      "last_updated":  "2024-05-13",
+                                      "organization_name":  "AAR MEDICAL PC",
+                                      "organizational_subpart":  "NO",
+                                      "status":  "A"
+                                  },
+                        "created_epoch":  "1307740609000",
+                        "endpoints":  [
+
+                                      ],
+                        "enumeration_type":  "NPI-2",
+                        "identifiers":  [
+                                            {
+                                                "code":  "05",
+                                                "desc":  "MEDICAID",
+                                                "identifier":  "03562392",
+                                                "issuer":  null,
+                                                "state":  "NY"
+                                            }
+                                        ],
+                        "last_updated_epoch":  "1715638870000",
+                        "number":  "1497040109",
+                        "other_names":  [
+
+                                        ],
+                        "practiceLocations":  [
+
+                                              ],
+                        "taxonomies":  [
+                                           {
+                                               "code":  "207K00000X",
+                                               "desc":  "Allergy \u0026 Immunology",
+                                               "license":  "263161",
+                                               "primary":  false,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207QS1201X",
+                                               "desc":  "Family Medicine, Sleep Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207R00000X",
+                                               "desc":  "Internal Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207RP1001X",
+                                               "desc":  "Internal Medicine, Pulmonary Disease",
+                                               "license":  "192569",
+                                               "primary":  true,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2084N0400X",
+                                               "desc":  "Psychiatry \u0026 Neurology, Neurology",
+                                               "license":  "206049",
+                                               "primary":  false,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           }
+                                       ]
+                    }
+                ]
+}

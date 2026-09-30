@@ -1,0 +1,80 @@
+﻿{
+    "result_count":  1,
+    "results":  [
+                    {
+                        "addresses":  [
+                                          {
+                                              "address_1":  "9001 FORT HAMILTON PKWY",
+                                              "address_purpose":  "LOCATION",
+                                              "address_type":  "DOM",
+                                              "city":  "BROOKLYN",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "postal_code":  "112096408",
+                                              "state":  "NY",
+                                              "telephone_number":  "718-748-4446"
+                                          },
+                                          {
+                                              "address_1":  "9001 FORT HAMILTON PKWY",
+                                              "address_purpose":  "MAILING",
+                                              "address_type":  "DOM",
+                                              "city":  "BROOKLYN",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "postal_code":  "112096408",
+                                              "state":  "NY",
+                                              "telephone_number":  "718-748-4446"
+                                          }
+                                      ],
+                        "basic":  {
+                                      "authorized_official_credential":  "M.D.",
+                                      "authorized_official_first_name":  "ALI",
+                                      "authorized_official_last_name":  "EL ATAT",
+                                      "authorized_official_name_prefix":  "--",
+                                      "authorized_official_name_suffix":  "--",
+                                      "authorized_official_telephone_number":  "9174555205",
+                                      "authorized_official_title_or_position":  "director",
+                                      "certification_date":  "2020-03-19",
+                                      "enumeration_date":  "2013-03-13",
+                                      "last_updated":  "2020-03-19",
+                                      "organization_name":  "A ATAT PROGRESSIVE PULMONARY \u0026 SLEEP MEDICINE PLLC",
+                                      "organizational_subpart":  "NO",
+                                      "status":  "A"
+                                  },
+                        "created_epoch":  "1363196044000",
+                        "endpoints":  [
+
+                                      ],
+                        "enumeration_type":  "NPI-2",
+                        "identifiers":  [
+
+                                        ],
+                        "last_updated_epoch":  "1584635477000",
+                        "number":  "1720329949",
+                        "other_names":  [
+
+                                        ],
+                        "practiceLocations":  [
+
+                                              ],
+                        "taxonomies":  [
+                                           {
+                                               "code":  "207RS0012X",
+                                               "desc":  "Internal Medicine, Sleep Medicine",
+                                               "license":  "002651",
+                                               "primary":  false,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207RP1001X",
+                                               "desc":  "Internal Medicine, Pulmonary Disease",
+                                               "license":  "002651",
+                                               "primary":  true,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           }
+                                       ]
+                    }
+                ]
+}

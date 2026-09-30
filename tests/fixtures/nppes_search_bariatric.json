@@ -1,0 +1,314 @@
+﻿{
+    "result_count":  3,
+    "results":  [
+                    {
+                        "addresses":  [
+                                          {
+                                              "address_1":  "217 OLD ITHACA RD",
+                                              "address_purpose":  "MAILING",
+                                              "address_type":  "DOM",
+                                              "city":  "HORSEHEADS",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "postal_code":  "148451778",
+                                              "state":  "NY",
+                                              "telephone_number":  "607-731-4644"
+                                          },
+                                          {
+                                              "address_1":  "235 FOREST AVE",
+                                              "address_purpose":  "LOCATION",
+                                              "address_type":  "DOM",
+                                              "city":  "GLEN COVE",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "fax_number":  "516-671-6372",
+                                              "postal_code":  "115422034",
+                                              "state":  "NY",
+                                              "telephone_number":  "718-285-7023"
+                                          }
+                                      ],
+                        "basic":  {
+                                      "authorized_official_credential":  "MD",
+                                      "authorized_official_first_name":  "MUHAMMAD",
+                                      "authorized_official_last_name":  "JALALUDDIN",
+                                      "authorized_official_telephone_number":  "2102685398",
+                                      "authorized_official_title_or_position":  "Director",
+                                      "certification_date":  "2026-04-01",
+                                      "enumeration_date":  "2025-05-24",
+                                      "last_updated":  "2026-04-01",
+                                      "organization_name":  "787 MEDICAL PC",
+                                      "organizational_subpart":  "NO",
+                                      "status":  "A"
+                                  },
+                        "created_epoch":  "1748088302000",
+                        "endpoints":  [
+
+                                      ],
+                        "enumeration_type":  "NPI-2",
+                        "identifiers":  [
+
+                                        ],
+                        "last_updated_epoch":  "1775052132000",
+                        "number":  "1023801842",
+                        "other_names":  [
+
+                                        ],
+                        "practiceLocations":  [
+
+                                              ],
+                        "taxonomies":  [
+                                           {
+                                               "code":  "207QA0401X",
+                                               "desc":  "Family Medicine, Addiction Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "363L00000X",
+                                               "desc":  "Nurse Practitioner",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207T00000X",
+                                               "desc":  "Neurological Surgery",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "208VP0000X",
+                                               "desc":  null,
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207R00000X",
+                                               "desc":  "Internal Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "163WP0000X",
+                                               "desc":  "Registered Nurse, Pain Management",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "202K00000X",
+                                               "desc":  "Phlebology",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "363A00000X",
+                                               "desc":  "Physician Assistant",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "208VP0014X",
+                                               "desc":  "Pain Medicine, Interventional Pain Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "2081P2900X",
+                                               "desc":  "Physical Medicine \u0026 Rehabilitation, Pain Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207QB0002X",
+                                               "desc":  "Family Medicine, Bariatric Medicine",
+                                               "license":  null,
+                                               "primary":  false,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "202D00000X",
+                                               "desc":  "Integrative Medicine",
+                                               "license":  null,
+                                               "primary":  true,
+                                               "state":  null,
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           }
+                                       ]
+                    },
+                    {
+                        "addresses":  [
+                                          {
+                                              "address_1":  "600 E GENESEE ST STE 114",
+                                              "address_purpose":  "MAILING",
+                                              "address_type":  "DOM",
+                                              "city":  "SYRACUSE",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "postal_code":  "132023108",
+                                              "state":  "NY"
+                                          },
+                                          {
+                                              "address_1":  "600 E GENESEE ST STE 114",
+                                              "address_purpose":  "LOCATION",
+                                              "address_type":  "DOM",
+                                              "city":  "SYRACUSE",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "postal_code":  "132023108",
+                                              "state":  "NY",
+                                              "telephone_number":  "315-447-6359"
+                                          }
+                                      ],
+                        "basic":  {
+                                      "authorized_official_first_name":  "GINNY",
+                                      "authorized_official_last_name":  "RENEAU",
+                                      "authorized_official_telephone_number":  "3159560935",
+                                      "authorized_official_title_or_position":  "Business Administrator",
+                                      "certification_date":  "2023-08-11",
+                                      "enumeration_date":  "2023-08-11",
+                                      "last_updated":  "2023-08-11",
+                                      "organization_name":  "BARBARA J CONNOR MD PLLC",
+                                      "organizational_subpart":  "NO",
+                                      "status":  "A"
+                                  },
+                        "created_epoch":  "1691776620000",
+                        "endpoints":  [
+
+                                      ],
+                        "enumeration_type":  "NPI-2",
+                        "identifiers":  [
+
+                                        ],
+                        "last_updated_epoch":  "1691776620000",
+                        "number":  "1598448854",
+                        "other_names":  [
+
+                                        ],
+                        "practiceLocations":  [
+
+                                              ],
+                        "taxonomies":  [
+                                           {
+                                               "code":  "207RB0002X",
+                                               "desc":  "Internal Medicine, Bariatric Medicine",
+                                               "license":  null,
+                                               "primary":  true,
+                                               "state":  null,
+                                               "taxonomy_group":  "193400000X - Single Specialty Group"
+                                           }
+                                       ]
+                    },
+                    {
+                        "addresses":  [
+                                          {
+                                              "address_1":  "4711 CHURCH AVE",
+                                              "address_purpose":  "MAILING",
+                                              "address_type":  "DOM",
+                                              "city":  "BROOKLYN",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "fax_number":  "516-629-6258",
+                                              "postal_code":  "112033209",
+                                              "state":  "NY",
+                                              "telephone_number":  "917-364-0801"
+                                          },
+                                          {
+                                              "address_1":  "4711 CHURCH AVE",
+                                              "address_purpose":  "LOCATION",
+                                              "address_type":  "DOM",
+                                              "city":  "BROOKLYN",
+                                              "country_code":  "US",
+                                              "country_name":  "United States",
+                                              "fax_number":  "516-629-6258",
+                                              "postal_code":  "112033209",
+                                              "state":  "NY",
+                                              "telephone_number":  "917-364-0801"
+                                          }
+                                      ],
+                        "basic":  {
+                                      "authorized_official_first_name":  "SYED",
+                                      "authorized_official_last_name":  "AHMED",
+                                      "authorized_official_middle_name":  "I",
+                                      "authorized_official_name_prefix":  "--",
+                                      "authorized_official_name_suffix":  "--",
+                                      "authorized_official_telephone_number":  "9173640801",
+                                      "authorized_official_title_or_position":  "CEO",
+                                      "enumeration_date":  "2010-08-29",
+                                      "last_updated":  "2012-01-12",
+                                      "organization_name":  "BROOKLYN COMPREHENSIVE CARE MEDICAL PC",
+                                      "organizational_subpart":  "NO",
+                                      "status":  "A"
+                                  },
+                        "created_epoch":  "1283074801000",
+                        "endpoints":  [
+
+                                      ],
+                        "enumeration_type":  "NPI-2",
+                        "identifiers":  [
+
+                                        ],
+                        "last_updated_epoch":  "1326392506000",
+                        "number":  "1285940148",
+                        "other_names":  [
+
+                                        ],
+                        "practiceLocations":  [
+
+                                              ],
+                        "taxonomies":  [
+                                           {
+                                               "code":  "207Q00000X",
+                                               "desc":  "Family Medicine",
+                                               "license":  "234776",
+                                               "primary":  false,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207QA0505X",
+                                               "desc":  "Family Medicine, Adult Medicine",
+                                               "license":  "234776",
+                                               "primary":  false,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207R00000X",
+                                               "desc":  "Internal Medicine",
+                                               "license":  "234776",
+                                               "primary":  false,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           },
+                                           {
+                                               "code":  "207RB0002X",
+                                               "desc":  "Internal Medicine, Bariatric Medicine",
+                                               "license":  "234776",
+                                               "primary":  true,
+                                               "state":  "NY",
+                                               "taxonomy_group":  "193200000X - Multi-Specialty Group"
+                                           }
+                                       ]
+                    }
+                ]
+}

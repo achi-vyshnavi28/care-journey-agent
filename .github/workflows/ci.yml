@@ -1,0 +1,52 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  api:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env: {POSTGRES_PASSWORD: cj, POSTGRES_DB: journeys}
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 5s --health-retries 10
+      mysql:
+        image: mysql:8.4
+        env: {MYSQL_ROOT_PASSWORD: cj, MYSQL_DATABASE: journeys}
+        ports: ["3306:3306"]
+        options: --health-cmd "mysqladmin ping -pcj" --health-interval 5s --health-retries 20
+    env:
+      JOURNEY_TEST_PG_URL: postgresql+psycopg://postgres:cj@localhost:5432/journeys
+      JOURNEY_TEST_MYSQL_URL: mysql+pymysql://root:cj@127.0.0.1:3306/journeys
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -r requirements.txt
+      - name: Tests on SQLite, PostgreSQL and MySQL, DynamoDB on moto, recorded real NPPES and CMS responses
+        run: pytest -q
+      - name: Agent gate - the rules playbook must handle all 16 real pended cases correctly (live public APIs)
+        run: |
+          python -m evals.run_agent_eval rules
+          python -c "import json,sys; s=json.load(open('results/agent_eval_rules.json'))['summary']; sys.exit(0 if s['correct']==s['journeys'] else 1)"
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run: {working-directory: web}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: "24", cache: npm, cache-dependency-path: web/package-lock.json}
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+  docker:
+    runs-on: ubuntu-latest
+    needs: api
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t care-journey .
+      - name: Container starts and serves the SLA board
+        run: |
+          docker run -d -p 8930:8930 --name cj care-journey
+          for i in $(seq 1 30); do curl -sf localhost:8930/health && break; sleep 2; done
+          curl -sf localhost:8930/journeys

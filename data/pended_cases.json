@@ -1,0 +1,227 @@
+[
+ {
+  "case_id": "MTS-4414",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "obesity_comorbidity"
+  ],
+  "summary": "Pended for clinical review: documentation does not state obesity_comorbidity.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "expedited",
+   "received_hours_ago": 2
+  }
+ },
+ {
+  "case_id": "MTS-0013",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "prior_medical_treatment_failed"
+  ],
+  "summary": "Pended for clinical review: documentation does not state prior_medical_treatment_failed.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "standard",
+   "received_hours_ago": 20
+  }
+ },
+ {
+  "case_id": "MTS-4566",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "obesity_comorbidity",
+   "prior_medical_treatment_failed"
+  ],
+  "summary": "Pended for clinical review: documentation does not state obesity_comorbidity, prior_medical_treatment_failed.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "standard",
+   "received_hours_ago": 60
+  }
+ },
+ {
+  "case_id": "MTS-4567",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "prior_medical_treatment_failed"
+  ],
+  "summary": "Pended for clinical review: documentation does not state prior_medical_treatment_failed.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "standard",
+   "received_hours_ago": 100
+  }
+ },
+ {
+  "case_id": "MTS-3942",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "obesity_comorbidity"
+  ],
+  "summary": "Pended for clinical review: documentation does not state obesity_comorbidity.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "standard",
+   "received_hours_ago": 130
+  }
+ },
+ {
+  "case_id": "MTS-0001",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "bmi",
+   "prior_medical_treatment_failed"
+  ],
+  "summary": "Pended for clinical review: documentation does not state bmi, prior_medical_treatment_failed.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "expedited",
+   "received_hours_ago": 150
+  }
+ },
+ {
+  "case_id": "MTS-0010",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "bmi"
+  ],
+  "summary": "Pended for clinical review: documentation does not state bmi.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "standard",
+   "received_hours_ago": 160
+  }
+ },
+ {
+  "case_id": "MTS-0005",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "bmi",
+   "obesity_comorbidity"
+  ],
+  "summary": "Pended for clinical review: documentation does not state bmi, obesity_comorbidity.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "standard",
+   "received_hours_ago": 170
+  }
+ },
+ {
+  "case_id": "MTS-0015",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "bmi",
+   "obesity_comorbidity",
+   "prior_medical_treatment_failed"
+  ],
+  "summary": "Pended for clinical review: documentation does not state bmi, obesity_comorbidity, prior_medical_treatment_failed.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "standard",
+   "received_hours_ago": 5
+  }
+ },
+ {
+  "case_id": "MTS-1399",
+  "policy_id": "ncd_100_1_bariatric",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "bmi",
+   "obesity_comorbidity",
+   "prior_medical_treatment_failed"
+  ],
+  "summary": "Pended for clinical review: documentation does not state bmi, obesity_comorbidity, prior_medical_treatment_failed.",
+  "demo": {
+   "ordering_npi": "1497941645",
+   "urgency": "standard",
+   "received_hours_ago": 30
+  }
+ },
+ {
+  "case_id": "MTS-1467",
+  "policy_id": "ncd_240_4_cpap",
+  "pend_reason": "criteria_not_met",
+  "missing_facts": [],
+  "summary": "Pended for clinical review: criteria not met (C2_AHI_15, C3_AHI_5_14). Only a clinician can deny.",
+  "demo": {
+   "ordering_npi": "1720329949",
+   "urgency": "expedited",
+   "received_hours_ago": 66
+  }
+ },
+ {
+  "case_id": "MTS-1308",
+  "policy_id": "ncd_240_4_cpap",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "ahi"
+  ],
+  "summary": "Pended for clinical review: documentation does not state ahi.",
+  "demo": {
+   "ordering_npi": "1720329949",
+   "urgency": "standard",
+   "received_hours_ago": 80
+  }
+ },
+ {
+  "case_id": "MTS-1474",
+  "policy_id": "ncd_240_4_cpap",
+  "pend_reason": "criteria_not_met",
+  "missing_facts": [],
+  "summary": "Pended for clinical review: criteria not met (C2_AHI_15, C3_AHI_5_14). Only a clinician can deny.",
+  "demo": {
+   "ordering_npi": "1720329949",
+   "urgency": "standard",
+   "received_hours_ago": 110
+  }
+ },
+ {
+  "case_id": "MTS-1310",
+  "policy_id": "ncd_240_4_cpap",
+  "pend_reason": "missing_documentation",
+  "missing_facts": [
+   "ahi",
+   "cardiovascular_comorbidity",
+   "sleep_test_documented"
+  ],
+  "summary": "Pended for clinical review: documentation does not state ahi, cardiovascular_comorbidity, sleep_test_documented.",
+  "demo": {
+   "ordering_npi": "1720329949",
+   "urgency": "standard",
+   "received_hours_ago": 140
+  }
+ },
+ {
+  "case_id": "MTS-1350",
+  "policy_id": "ncd_240_4_cpap",
+  "pend_reason": "criteria_not_met",
+  "missing_facts": [],
+  "summary": "Pended for clinical review: criteria not met (C2_AHI_15, C3_AHI_5_14). Only a clinician can deny.",
+  "demo": {
+   "ordering_npi": "1720329949",
+   "urgency": "standard",
+   "received_hours_ago": 1
+  }
+ },
+ {
+  "case_id": "MTS-1463",
+  "policy_id": "ncd_240_4_cpap",
+  "pend_reason": "criteria_not_met",
+  "missing_facts": [],
+  "summary": "Pended for clinical review: criteria not met (C1_SLEEP_TEST). Only a clinician can deny.",
+  "demo": {
+   "ordering_npi": "1720329949",
+   "urgency": "expedited",
+   "received_hours_ago": 175
+  }
+ }
+]

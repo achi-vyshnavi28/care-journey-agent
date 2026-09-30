@@ -1,0 +1,341 @@
+{
+ "summary": {
+  "planner": "llm",
+  "journeys": 16,
+  "correct": 6,
+  "escalation_correct": 15,
+  "requested_all_missing": 6,
+  "unsafe_steps_blocked": 8,
+  "planner_fallbacks": 2,
+  "avg_steps": 6.1
+ },
+ "journeys": [
+  {
+   "case_id": "MTS-4414",
+   "sla": "on_track",
+   "must_escalate": false,
+   "requested_all_missing": false,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": false,
+   "correct": false,
+   "steps": 10,
+   "blocked_by_guards": 2,
+   "fallbacks": 0,
+   "tools": [
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member"
+   ]
+  },
+  {
+   "case_id": "MTS-0013",
+   "sla": "on_track",
+   "must_escalate": false,
+   "requested_all_missing": false,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": false,
+   "correct": false,
+   "steps": 10,
+   "blocked_by_guards": 3,
+   "fallbacks": 0,
+   "tools": [
+    "notify_member",
+    "coverage_policy",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member"
+   ]
+  },
+  {
+   "case_id": "MTS-4566",
+   "sla": "on_track",
+   "must_escalate": false,
+   "requested_all_missing": false,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": false,
+   "correct": false,
+   "steps": 10,
+   "blocked_by_guards": 1,
+   "fallbacks": 0,
+   "tools": [
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "coverage_policy",
+    "notify_member"
+   ]
+  },
+  {
+   "case_id": "MTS-4567",
+   "sla": "on_track",
+   "must_escalate": false,
+   "requested_all_missing": false,
+   "escalation_correct": false,
+   "member_notified": true,
+   "finished": true,
+   "correct": false,
+   "steps": 5,
+   "blocked_by_guards": 0,
+   "fallbacks": 0,
+   "tools": [
+    "notify_member",
+    "coverage_policy",
+    "verify_provider",
+    "escalate_to_clinician",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-3942",
+   "sla": "at_risk",
+   "must_escalate": true,
+   "requested_all_missing": false,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": false,
+   "steps": 4,
+   "blocked_by_guards": 0,
+   "fallbacks": 0,
+   "tools": [
+    "escalate_to_clinician",
+    "notify_member",
+    "coverage_policy",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-0001",
+   "sla": "breached",
+   "must_escalate": true,
+   "requested_all_missing": false,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": false,
+   "steps": 3,
+   "blocked_by_guards": 0,
+   "fallbacks": 0,
+   "tools": [
+    "escalate_to_clinician",
+    "notify_member",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-0010",
+   "sla": "at_risk",
+   "must_escalate": true,
+   "requested_all_missing": false,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": false,
+   "steps": 3,
+   "blocked_by_guards": 0,
+   "fallbacks": 0,
+   "tools": [
+    "escalate_to_clinician",
+    "notify_member",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-0005",
+   "sla": "breached",
+   "must_escalate": true,
+   "requested_all_missing": false,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": false,
+   "steps": 3,
+   "blocked_by_guards": 0,
+   "fallbacks": 0,
+   "tools": [
+    "escalate_to_clinician",
+    "notify_member",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-0015",
+   "sla": "on_track",
+   "must_escalate": false,
+   "requested_all_missing": false,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": false,
+   "correct": false,
+   "steps": 10,
+   "blocked_by_guards": 1,
+   "fallbacks": 0,
+   "tools": [
+    "coverage_policy",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member"
+   ]
+  },
+  {
+   "case_id": "MTS-1399",
+   "sla": "on_track",
+   "must_escalate": false,
+   "requested_all_missing": true,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": true,
+   "steps": 9,
+   "blocked_by_guards": 0,
+   "fallbacks": 1,
+   "tools": [
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "verify_provider",
+    "coverage_policy",
+    "request_records",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-1467",
+   "sla": "at_risk",
+   "must_escalate": true,
+   "requested_all_missing": true,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": true,
+   "steps": 3,
+   "blocked_by_guards": 0,
+   "fallbacks": 0,
+   "tools": [
+    "escalate_to_clinician",
+    "notify_member",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-1308",
+   "sla": "on_track",
+   "must_escalate": false,
+   "requested_all_missing": false,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": false,
+   "correct": false,
+   "steps": 10,
+   "blocked_by_guards": 1,
+   "fallbacks": 0,
+   "tools": [
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "notify_member",
+    "coverage_policy"
+   ]
+  },
+  {
+   "case_id": "MTS-1474",
+   "sla": "on_track",
+   "must_escalate": true,
+   "requested_all_missing": true,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": true,
+   "steps": 4,
+   "blocked_by_guards": 0,
+   "fallbacks": 0,
+   "tools": [
+    "escalate_to_clinician",
+    "notify_member",
+    "coverage_policy",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-1310",
+   "sla": "at_risk",
+   "must_escalate": true,
+   "requested_all_missing": true,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": true,
+   "steps": 7,
+   "blocked_by_guards": 0,
+   "fallbacks": 1,
+   "tools": [
+    "escalate_to_clinician",
+    "notify_member",
+    "verify_provider",
+    "coverage_policy",
+    "request_records",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-1350",
+   "sla": "on_track",
+   "must_escalate": true,
+   "requested_all_missing": true,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": true,
+   "steps": 3,
+   "blocked_by_guards": 0,
+   "fallbacks": 0,
+   "tools": [
+    "escalate_to_clinician",
+    "notify_member",
+    "finish"
+   ]
+  },
+  {
+   "case_id": "MTS-1463",
+   "sla": "breached",
+   "must_escalate": true,
+   "requested_all_missing": true,
+   "escalation_correct": true,
+   "member_notified": true,
+   "finished": true,
+   "correct": true,
+   "steps": 3,
+   "blocked_by_guards": 0,
+   "fallbacks": 0,
+   "tools": [
+    "escalate_to_clinician",
+    "notify_member",
+    "finish"
+   ]
+  }
+ ]
+}
