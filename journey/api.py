@@ -27,6 +27,7 @@ log = logging.getLogger("journey")
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 app = FastAPI(title="Care Journey Agent", description="Task-driven agents that close prior-authorization documentation gaps before the CMS deadline")
 app.add_middleware(CORSMiddleware, allow_origins=os.getenv("JOURNEY_CORS", "http://localhost:5176").split(","),
+                   allow_origin_regex=os.getenv("JOURNEY_CORS_REGEX"),  # e.g. https://.*\.onrender\.com when deployed
                    allow_methods=["GET", "POST"], allow_headers=["Content-Type"])
 
 

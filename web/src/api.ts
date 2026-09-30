@@ -44,7 +44,9 @@ export interface JourneyDetail extends Journey {
   outbox: OutboxMessage[]
 }
 
-const BASE = import.meta.env.VITE_API_URL ?? '/api'
+// local dev: Vite proxies /api; deployed: VITE_API_URL, or VITE_API_HOST injected by the Render blueprint
+const HOST = import.meta.env.VITE_API_HOST
+const BASE = import.meta.env.VITE_API_URL ?? (HOST ? `https://${HOST}` : '/api')
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, init)

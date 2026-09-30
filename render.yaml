@@ -1,0 +1,26 @@
+# Render Blueprint: New -> Blueprint -> pick this repo. Deploys the API (Docker) and the SLA dashboard (static site).
+# The API starts journeys for the 16 real pended cases at boot, calling the live NPPES and CMS Coverage APIs.
+services:
+  - type: web
+    name: care-journey-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: JOURNEY_DEMO
+        value: "1"
+      - key: JOURNEY_CORS_REGEX
+        value: https://.*\.onrender\.com
+      - key: GROQ_API_KEY
+        sync: false
+  - type: web
+    name: care-journey-dashboard
+    runtime: static
+    buildCommand: cd web && npm ci && npm run build
+    staticPublishPath: web/dist
+    envVars:
+      - key: VITE_API_HOST
+        fromService:
+          type: web
+          name: care-journey-api
+          property: host
