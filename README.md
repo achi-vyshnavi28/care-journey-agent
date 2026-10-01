@@ -39,7 +39,8 @@ identical outbound message is never queued twice.
 | Rules playbook | **16/16** | - |
 | LLM, first version | 11/16 | Rate-limit errors fell back to the playbook; escalated cases that only needed records |
 | LLM + escalation guard | 6/16 | Looped on `notify_member`; escalated and finished without requesting records |
-| LLM + obligations + repeat guard | see `results/agent_eval_llm.json` | |
+| LLM + obligations + repeat guard | not scored | Invented an NPI (`0000000000`) for provider lookup because the case NPI was not in its state; found in a trace, fixed before a clean run |
+| + ordering NPI in state, NPI and policy guards | **16/16** | - (0 playbook fallbacks, 0 blocked steps, 5.3 steps per journey) |
 
 An unconstrained LLM planner is unsafe even with good prompts. What worked was **plan-and-execute with obligations**:
 code decides *what* must happen, the model decides *order and wording*, and guards block everything else.
@@ -51,7 +52,7 @@ code decides *what* must happen, the model decides *order and wording*, and guar
 | NoSQL / AWS | **DynamoDB** single-table task log and follow-up index (boto3; moto locally and in tests) |
 | Relational | SQLAlchemy Core on **PostgreSQL** and **MySQL** (SQLite locally): journeys and an idempotent outbox |
 | Frontend | **React + TypeScript** (Vite): SLA board, agent trace with blocked steps, outbox |
-| Tests / CI | 18 pytest (also run on PostgreSQL and MySQL), 4 Vitest; GitHub Actions with DB service containers, an agent gate on the real cases, frontend build, Docker smoke test |
+| Tests / CI | 19 pytest (also run on PostgreSQL and MySQL), 4 Vitest; GitHub Actions with DB service containers, an agent gate on the real cases, frontend build, Docker smoke test |
 
 ## Run
 ```bash

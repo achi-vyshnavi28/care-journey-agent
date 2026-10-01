@@ -127,6 +127,23 @@ def test_guards_stop_an_llm_planner_from_unsafe_steps(stores, http, monkeypatch)
     assert sum(m["kind"] == "member_update" for m in out["outbox"]) == 1
 
 
+def test_agent_cannot_verify_an_invented_npi(stores, http, monkeypatch):
+    """Found in evaluation: an LLM without the NPI in its state invented '0000000000', got 'not found', and escalated.
+    The guard now only allows the case's own ordering NPI."""
+    store, _ = stores
+    jid = make_journey(store)
+    script = iter([("verify_provider", {"npi": "0000000000"}), ("verify_provider", {"npi": BARI_NPI}),
+                   ("coverage_policy", {"policy_id": "ncd_240_4_cpap"}), ("coverage_policy", {"policy_id": "ncd_100_1_bariatric"}),
+                   ("request_records", {"missing_facts": ["prior_medical_treatment_failed"]}),
+                   ("notify_member", {"message": "We asked your doctor for records."}), ("finish", {"summary": "ok"})])
+    a = agent(stores, http, planner="llm")
+    monkeypatch.setattr(a, "_llm_next", lambda st, history: next(script))
+    out = a.run(jid, BARI_NPI)
+    errors = [s["result"]["error"] for s in out["trace"] if not s["ok"]]
+    assert "not another identifier" in errors[0] and "judged against ncd_100_1_bariatric" in errors[1]
+    assert out["status"] == "awaiting_records" and out["trace"][-1]["ok"]
+
+
 def test_llm_failure_falls_back_to_the_playbook(stores, http, monkeypatch):
     store, _ = stores
     jid = make_journey(store)

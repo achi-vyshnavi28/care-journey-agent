@@ -45,7 +45,8 @@ class JourneyAgent:
 
     # ---------- state and guards ----------
     def _state(self, j, s):
-        st = {"journey_id": j["journey_id"], "policy_id": j["policy_id"], "pend_reason": j.get("pend_reason"),
+        st = {"journey_id": j["journey_id"], "policy_id": j["policy_id"], "ordering_npi": self._npi,
+              "pend_reason": j.get("pend_reason"),
               "missing_facts": j["missing_facts"], "sla": sla.status(j["received_at"], j["urgency"], self.clock()),
               "provider": s["provider"], "policy_checked": s["policy"] is not None, "requested": sorted(s["requested"]),
               "escalated": s["escalated"], "member_notified": s["notified"]}
@@ -88,6 +89,10 @@ class JourneyAgent:
         allowed = {t["function"]["name"] for t in tools.TOOL_SCHEMAS}
         if tool not in allowed:
             raise GuardError(f"tool {tool!r} is not allowed")
+        if tool == "verify_provider" and args.get("npi") != st["ordering_npi"]:
+            raise GuardError(f"verify the case's ordering provider (NPI {st['ordering_npi']}), not another identifier")
+        if tool == "coverage_policy" and args.get("policy_id") != st["policy_id"]:
+            raise GuardError(f"this case is judged against {st['policy_id']}")
         if tool == "request_records":
             if not (st["provider"] and st["provider"].get("valid")):
                 raise GuardError("verify the ordering provider before requesting records")
