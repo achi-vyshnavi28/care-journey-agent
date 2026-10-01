@@ -67,3 +67,6 @@ cd web && npm install && npm run dev     # dashboard on :5176
 - Outbound messages are queued, not sent; a real deployment adds a fax or portal integration and a human check.
 - Provider pairings and arrival times are demo values; 16 journeys is a small evaluation.
 - The playbook encodes one team's policy; real utilization-management rules vary by payer and service.
+
+## License
+The code is open source under the [MIT License](LICENSE). Clinical notes come from MTSamples (Apache-2.0); NPPES and CMS Coverage API data are US government works.
