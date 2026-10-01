@@ -1,0 +1,18 @@
+# Used by ec2_user_data.sh on the EC2 instance: the API plus PostgreSQL for journeys and the outbox.
+services:
+  db:
+    image: postgres:16
+    environment: {POSTGRES_USER: journey, POSTGRES_PASSWORD: "${PG_PASSWORD}", POSTGRES_DB: journeys}
+    volumes: [pgdata:/var/lib/postgresql/data]
+    ports: ["5432:5432"]  # reachable by the Lambda worker; restrict with the instance security group
+  api:
+    build: ..
+    depends_on: [db]
+    ports: ["80:8930"]
+    environment:
+      JOURNEY_DB_URL: "postgresql+psycopg://journey:${PG_PASSWORD}@db:5432/journeys"
+      JOURNEY_SQS_URL: "${JOURNEY_SQS_URL}"
+      JOURNEY_DYNAMO_TABLE: "${JOURNEY_DYNAMO_TABLE}"
+      AWS_DEFAULT_REGION: "${AWS_DEFAULT_REGION}"
+volumes:
+  pgdata:

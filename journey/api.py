@@ -89,6 +89,16 @@ def start(body: JourneyIn):
     return agent.run(body.case_id, body.ordering_npi)
 
 
+@app.post("/journeys/queue", status_code=202)
+def enqueue(body: JourneyIn):
+    """Asynchronous intake: put the case on SQS for the Lambda worker (needs JOURNEY_SQS_URL)."""
+    if not os.getenv("JOURNEY_SQS_URL"):
+        raise HTTPException(503, "SQS intake not configured (set JOURNEY_SQS_URL)")
+    from journey.queue import JourneyQueue
+
+    return {"message_id": JourneyQueue().submit(body.model_dump()), "case_id": body.case_id, "status": "queued"}
+
+
 @app.get("/journeys")
 def board():
     store, _, _ = deps()

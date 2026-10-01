@@ -1,0 +1,78 @@
+# AWS SAM template: the serverless half of Care Journey Agent.
+#   sam build && sam deploy --guided --parameter-overrides DbUrl=<postgres url on the EC2 host>
+# Creates: SQS intake queue + dead-letter queue, the Lambda worker (SQS event source with partial batch responses),
+# and the DynamoDB task log (single-table, follow-up GSI, on-demand billing).
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: Care Journey Agent - SQS intake, Lambda worker, DynamoDB task log
+
+Parameters:
+  DbUrl:
+    Type: String
+    NoEcho: true
+    Description: SQLAlchemy URL of the journeys database (PostgreSQL on the EC2 host)
+
+Resources:
+  IntakeDLQ:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: journey-intake-dlq
+      MessageRetentionPeriod: 1209600
+
+  IntakeQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: journey-intake
+      VisibilityTimeout: 180
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt IntakeDLQ.Arn
+        maxReceiveCount: 3
+
+  TaskLog:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: journey-tasks
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - {AttributeName: PK, AttributeType: S}
+        - {AttributeName: SK, AttributeType: S}
+        - {AttributeName: GSI1PK, AttributeType: S}
+        - {AttributeName: GSI1SK, AttributeType: S}
+      KeySchema:
+        - {AttributeName: PK, KeyType: HASH}
+        - {AttributeName: SK, KeyType: RANGE}
+      GlobalSecondaryIndexes:
+        - IndexName: GSI1
+          KeySchema:
+            - {AttributeName: GSI1PK, KeyType: HASH}
+            - {AttributeName: GSI1SK, KeyType: RANGE}
+          Projection: {ProjectionType: ALL}
+
+  Worker:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: journey-worker
+      CodeUri: ..
+      Handler: journey.worker.handler
+      Runtime: python3.12
+      Timeout: 120
+      MemorySize: 512
+      Environment:
+        Variables:
+          JOURNEY_DB_URL: !Ref DbUrl
+          JOURNEY_DYNAMO_TABLE: !Ref TaskLog
+          JOURNEY_PLANNER: rules
+      Policies:
+        - DynamoDBCrudPolicy: {TableName: !Ref TaskLog}
+      Events:
+        Intake:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt IntakeQueue.Arn
+            BatchSize: 10
+            FunctionResponseTypes: [ReportBatchItemFailures]
+
+Outputs:
+  QueueUrl: {Value: !Ref IntakeQueue, Description: Set as JOURNEY_SQS_URL on the API host}
+  DeadLetterQueueUrl: {Value: !Ref IntakeDLQ}
+  TaskTable: {Value: !Ref TaskLog, Description: Set as JOURNEY_DYNAMO_TABLE on the API host}

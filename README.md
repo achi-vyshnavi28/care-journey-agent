@@ -52,7 +52,7 @@ code decides *what* must happen, the model decides *order and wording*, and guar
 | NoSQL / AWS | **DynamoDB** single-table task log and follow-up index (boto3; moto locally and in tests) |
 | Relational | SQLAlchemy Core on **PostgreSQL** and **MySQL** (SQLite locally): journeys and an idempotent outbox |
 | Frontend | **React + TypeScript** (Vite): SLA board, agent trace with blocked steps, outbox |
-| Tests / CI | 19 pytest (also run on PostgreSQL and MySQL), 4 Vitest; GitHub Actions with DB service containers, an agent gate on the real cases, frontend build, Docker smoke test |
+| Tests / CI | 23 pytest (also run on PostgreSQL and MySQL), 4 Vitest; GitHub Actions with DB service containers, an agent gate on the real cases, frontend build, Docker smoke test |
 
 ## Run
 ```bash
@@ -67,6 +67,14 @@ cd web && npm install && npm run dev     # dashboard on :5176
 - Outbound messages are queued, not sent; a real deployment adds a fax or portal integration and a human check.
 - Provider pairings and arrival times are demo values; 16 journeys is a small evaluation.
 - The playbook encodes one team's policy; real utilization-management rules vary by payer and service.
+
+## AWS: SQS intake, Lambda worker, EC2 (`journey/queue.py`, `journey/worker.py`, `deploy/`)
+`POST /journeys/queue` puts a pended case on an **SQS** queue; a **Lambda** worker (SQS event source) runs the agent and
+writes the trace to the **DynamoDB** task log. The worker is idempotent (a redelivered message never runs the agent
+twice) and returns partial batch failures, so one bad message is retried alone and lands in a **dead-letter queue**
+after 3 receives. `deploy/template.yaml` (AWS SAM) creates the queues, the Lambda and the table;
+`deploy/ec2_user_data.sh` runs the API and PostgreSQL on **EC2**. Tests drive real messages through moto
+(`tests/test_queue.py`).
 
 ## License
 The code is open source under the [MIT License](LICENSE). Clinical notes come from MTSamples (Apache-2.0); NPPES and CMS Coverage API data are US government works.
